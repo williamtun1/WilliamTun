@@ -263,3 +263,273 @@ nav {
         padding-right: 25px;
     }
 }
+/* =========================================
+   PROJECT PAGE
+========================================= */
+
+
+/* ---------- HERO ---------- */
+
+.project-page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 70px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.project-page-title h1 {
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin: 15px 0 25px;
+}
+
+.project-page-summary {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.project-hero-image {
+    width: 100%;
+    height: 350px;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    background: #171717;
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.project-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 80px 40px;
+}
+
+.project-content h2 {
+    font-size: 40px;
+    line-height: 1.15;
+
+    margin: 10px 0 25px;
+}
+
+.project-text {
+    color: #aaa;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   IMAGE + TEXT SECTIONS
+========================================= */
+
+.project-split {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 40px;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+/* ---------- SMALLER IMAGE ---------- */
+
+.project-split-image {
+    width: 100%;
+
+    height: 300px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #171717;
+}
+
+.project-split-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ---------- TEXT ---------- */
+
+.project-split-text h2 {
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    margin: 10px 0 20px;
+}
+
+.project-split-text p {
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   PHOTO GALLERY
+========================================= */
+
+.project-gallery-section {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 80px 40px;
+}
+
+.project-gallery-section h2 {
+    font-size: 40px;
+
+    margin: 10px 0 35px;
+}
+
+.project-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Smaller gallery images */
+
+.project-gallery img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Small hover effect */
+
+.project-gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.project-back {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 30px 40px 90px;
+}
+
+.project-back a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+}
+
+.project-back a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .project-page-hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 70px;
+    }
+
+    .project-hero-image {
+        height: 300px;
+    }
+
+
+    /* Stack image and text on phones */
+
+    .project-split {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .project-split-image {
+        height: 280px;
+    }
+
+
+    /* Stack gallery */
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        height: 280px;
+    }
+
+
+    .project-page-hero,
+    .project-content,
+    .project-split,
+    .project-gallery-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
