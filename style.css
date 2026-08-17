@@ -533,3 +533,15 @@ nav {
     }
 
 }
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.logo:visited {
+    color: white;
+}
+
+.logo:hover {
+    color: white;
+}
