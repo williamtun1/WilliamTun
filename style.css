@@ -597,3 +597,64 @@ nav {
     }
 
 }
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 140px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 10px 0 45px;
+}
+
+.about-text > p:last-child {
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+
+/* ABOUT PHOTO */
+
+.about-photo {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #222;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+}
