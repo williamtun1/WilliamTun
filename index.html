@@ -138,40 +138,80 @@
 
                 <!-- PROJECT 1: BAJA FRONT UPRIGHT -->
 
+<!-- PROJECT 1: BAJA FRONT UPRIGHT -->
+
                 <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="images/baja-upright.jpg"
-                            alt="Baja SAE front upright"
+                
+                    <div
+                        class="project-model"
+                        style="
+                            position: relative;
+                            width: 100%;
+                            height: 330px;
+                            overflow: hidden;
+                            background-color: #181818;
+                        "
+                    >
+                
+                        <model-viewer
+                            src="model/2302M-00400_Front_Upright_Assy.glb"
+                            alt="Interactive 3D CAD model of the Baja SAE front upright assembly"
+                            camera-controls
+                            auto-rotate
+                            auto-rotate-delay="2000"
+                            rotation-per-second="20deg"
+                            shadow-intensity="1.5"
+                            shadow-softness="0.8"
+                            exposure="0.5"
+                            tone-mapping="commerce"
+                            environment-image="neutral"
+                            interaction-prompt="auto"
+                            touch-action="pan-y"
                             loading="lazy"
+                            style="
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                background-color: #181818;
+                                --poster-color: #181818;
+                            "
                         >
-
+                
+                            <div class="model-error" slot="error">
+                                The 3D model could not be loaded.
+                            </div>
+                
+                        </model-viewer>
+                
+                        <p class="model-instructions">
+                            Drag to rotate • Scroll to zoom
+                        </p>
+                
                     </div>
-
+                
+                
                     <div class="project-info">
-
+                
                         <p class="project-category">
                             VEHICLE DESIGN • FEA • MANUFACTURING
                         </p>
-
+                
                         <h3>
                             Baja SAE Front Upright
                         </h3>
-
+                
                         <p>
                             Designed and optimized a lightweight front upright
                             for a Baja SAE vehicle using CAD, FEA, and
                             design-for-manufacturing principles.
                         </p>
-
+                
                         <a href="projects/baja-upright.html">
                             View Project →
                         </a>
-
+                
                     </div>
-
+                
                 </article>
 
 
