@@ -663,14 +663,15 @@ nav {
     width: 100%;
     height: 330px;
     overflow: hidden;
-    background: #e8ecef;
+    background-color: #181818;
 }
 
 .project-model model-viewer {
     display: block;
     width: 100%;
     height: 100%;
-    --poster-color: transparent;
+    background-color: #181818;
+    --poster-color: #181818;
 }
 
 .model-instructions {
