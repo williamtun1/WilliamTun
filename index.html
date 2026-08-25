@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>William Tun | Mechanical Engineering Portfolio</title>
 
@@ -13,6 +17,12 @@
     >
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Interactive 3D model viewer -->
+    <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
 </head>
 
 <body>
@@ -20,19 +30,31 @@
     <!-- NAVIGATION -->
 
     <nav>
+
         <a href="#" class="logo">
             William Tun
         </a>
 
         <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
 
-            <!-- Resume link -->
-            <a href="William_Tun_Resume.pdf" target="_blank">
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a
+                href="William_Tun_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Resume
             </a>
+
         </div>
+
     </nav>
 
 
@@ -51,8 +73,8 @@
                 </p>
 
                 <h1>
-                    I design, analyze, and
-                    build <span>mechanical systems.</span>
+                    I design, analyze, and build
+                    <span>mechanical systems.</span>
                 </h1>
 
                 <p class="hero-description">
@@ -62,14 +84,17 @@
 
                 <div class="buttons">
 
-                    <a href="#projects" class="primary-button">
+                    <a
+                        href="#projects"
+                        class="primary-button"
+                    >
                         View Projects
                     </a>
 
-                    <!-- Resume button -->
                     <a
                         href="William_Tun_Resume.pdf"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="resume-button"
                     >
                         View Resume
@@ -80,13 +105,15 @@
             </div>
 
 
-            <!-- HERO BAJA PHOTO -->
+            <!-- HERO PHOTO -->
 
             <div class="hero-photo">
+
                 <img
                     src="images/baja-profile.jpeg"
-                    alt="William with Baja SAE vehicle"
+                    alt="William Tun with a Baja SAE vehicle"
                 >
+
             </div>
 
         </section>
@@ -94,7 +121,10 @@
 
         <!-- PROJECTS -->
 
-        <section id="projects" class="projects-section">
+        <section
+            id="projects"
+            class="projects-section"
+        >
 
             <p class="section-label">
                 SELECTED WORK
@@ -111,10 +141,13 @@
                 <article class="project-card">
 
                     <div class="project-image">
+
                         <img
                             src="images/baja-upright.jpg"
-                            alt="Baja SAE Front Upright"
+                            alt="Baja SAE front upright"
+                            loading="lazy"
                         >
+
                     </div>
 
                     <div class="project-info">
@@ -147,10 +180,13 @@
                 <article class="project-card">
 
                     <div class="project-image">
+
                         <img
                             src="images/battery-enclosure.jpg"
-                            alt="Electric Vehicle Battery Enclosure"
+                            alt="Electric vehicle battery enclosure"
+                            loading="lazy"
                         >
+
                     </div>
 
                     <div class="project-info">
@@ -178,15 +214,39 @@
                 </article>
 
 
-                <!-- PROJECT 3: WOODEN GO-KART -->
+                <!-- PROJECT 3: INTERACTIVE WOODEN GO-KART MODEL -->
 
                 <article class="project-card">
 
-                    <div class="project-image">
-                        <img
-                            src="images/being driven1.JPG"
-                            alt="Wooden Go-Kart being driven"
+                    <div class="project-model">
+
+                        <model-viewer
+                            src="models/wooden-gokart.glb"
+                            alt="Interactive 3D CAD model of William Tun's wooden go-kart"
+                            camera-controls
+                            auto-rotate
+                            auto-rotate-delay="2000"
+                            rotation-per-second="20deg"
+                            shadow-intensity="1"
+                            shadow-softness="1"
+                            exposure="1"
+                            environment-image="neutral"
+                            interaction-prompt="auto"
+                            touch-action="pan-y"
+                            loading="lazy"
                         >
+                            <div
+                                class="model-error"
+                                slot="error"
+                            >
+                                The 3D model could not be loaded.
+                            </div>
+                        </model-viewer>
+
+                        <p class="model-instructions">
+                            Drag to rotate • Scroll to zoom
+                        </p>
+
                     </div>
 
                     <div class="project-info">
@@ -219,10 +279,13 @@
                 <article class="project-card">
 
                     <div class="project-image">
+
                         <img
                             src="images/lidar-system.jpg"
-                            alt="LiDAR Blind-Spot Detection System"
+                            alt="LiDAR blind-spot detection system"
+                            loading="lazy"
                         >
+
                     </div>
 
                     <div class="project-info">
@@ -256,7 +319,10 @@
 
         <!-- ABOUT -->
 
-        <section id="about" class="about-section">
+        <section
+            id="about"
+            class="about-section"
+        >
 
             <div class="about-text">
 
@@ -277,12 +343,14 @@
 
             </div>
 
-
             <div class="about-photo">
+
                 <img
                     src="images/about-baja.png"
                     alt="William Tun with the Johns Hopkins Baja SAE vehicle"
+                    loading="lazy"
                 >
+
             </div>
 
         </section>
@@ -293,9 +361,11 @@
     <!-- FOOTER -->
 
     <footer>
+
         <p>
             © 2026 William Tun
         </p>
+
     </footer>
 
 </body>
