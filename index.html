@@ -218,7 +218,16 @@
 
                 <article class="project-card">
 
-                    <div class="project-model">
+                    <div
+                        class="project-model"
+                        style="
+                            position: relative;
+                            width: 100%;
+                            height: 330px;
+                            overflow: hidden;
+                            background-color: #181818;
+                        "
+                    >
 
                         <model-viewer
                             src="model/wooden-gokart.glb"
@@ -227,20 +236,30 @@
                             auto-rotate
                             auto-rotate-delay="2000"
                             rotation-per-second="20deg"
-                            shadow-intensity="1"
-                            shadow-softness="1"
-                            exposure="1"
+                            shadow-intensity="1.5"
+                            shadow-softness="0.8"
+                            exposure="0.5"
+                            tone-mapping="commerce"
                             environment-image="neutral"
                             interaction-prompt="auto"
                             touch-action="pan-y"
                             loading="lazy"
+                            style="
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                background-color: #181818;
+                                --poster-color: #181818;
+                            "
                         >
+
                             <div
                                 class="model-error"
                                 slot="error"
                             >
                                 The 3D model could not be loaded.
                             </div>
+
                         </model-viewer>
 
                         <p class="model-instructions">
