@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Baja SAE Front Upright | William Tun</title>
+
+    <meta
+        name="description"
+        content="Design, analysis, and manufacturing of a Baja SAE front upright by William Tun."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html" class="logo">
+            William Tun
+        </a>
+
+        <div class="nav-links">
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#about">About</a>
+
+            <a
+                href="../William_Tun_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Resume
+            </a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="project-page-hero">
+
+            <div class="project-page-title">
+
+                <p class="section-label">
+                    VEHICLE DESIGN • FEA • MANUFACTURING
+                </p>
+
+                <h1>
+                    Baja SAE Front Upright
+                </h1>
+
+                <p class="project-page-summary">
+                    Designed and optimized a lightweight front upright for the
+                    Johns Hopkins Baja SAE vehicle using SolidWorks, ANSYS,
+                    engineering drawings, GD&amp;T, and design-for-manufacturing
+                    principles.
+                </p>
+
+            </div>
+
+
+            <!-- INTERACTIVE MODEL -->
+
+            <div
+                class="project-model"
+                style="
+                    height: 430px;
+                    border: 1px solid #333333;
+                    border-radius: 16px;
+                "
+            >
+
+                <model-viewer
+                    src="../model/2302M-00400_Front_Upright_Assy.glb"
+                    alt="Interactive CAD model of the Baja SAE front upright"
+                    camera-controls
+                    auto-rotate
+                    auto-rotate-delay="2000"
+                    rotation-per-second="20deg"
+                    shadow-intensity="1.5"
+                    shadow-softness="0.8"
+                    exposure="0.5"
+                    tone-mapping="commerce"
+                    environment-image="neutral"
+                    interaction-prompt="auto"
+                    touch-action="pan-y"
+                    loading="eager"
+                >
+                    <div class="model-error" slot="error">
+                        The 3D model could not be loaded.
+                    </div>
+                </model-viewer>
+
+                <p class="model-instructions">
+                    Drag to rotate • Scroll to zoom
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-content">
+
+            <p class="section-label">
+                OVERVIEW
+            </p>
+
+            <h2>
+                Designing a critical suspension component
+            </h2>
+
+            <p class="project-text">
+                The front upright connects the wheel hub, control arms, and
+                steering linkage. Its geometry influences suspension movement,
+                steering behavior, vehicle handling, and unsprung mass.
+            </p>
+
+            <p class="project-text">
+                I designed the assembly around the vehicle’s suspension hard
+                points while accounting for bearing placement, fastener access,
+                component clearances, steering geometry, structural loads, and
+                manufacturing limitations.
+            </p>
+
+        </section>
+
+
+        <!-- CAD AND DESIGN -->
+
+        <section class="project-split">
+
+            <div class="project-split-image">
+                <img
+                    src="../images/baja-upright-cad.png"
+                    alt="CAD design of the Baja SAE front upright"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-split-text">
+
+                <p class="section-label">
+                    CAD AND DESIGN
+                </p>
+
+                <h2>
+                    Developing the upright geometry
+                </h2>
+
+                <p>
+                    The upright was modeled in SolidWorks and integrated into
+                    the complete front suspension assembly. This allowed me to
+                    evaluate component clearances, suspension motion, bearing
+                    locations, and steering-arm placement.
+                </p>
+
+                <p>
+                    The geometry was refined to remove unnecessary material
+                    while maintaining the stiffness needed to withstand
+                    off-road suspension and steering loads.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYSIS -->
+
+        <section class="project-split">
+
+            <div class="project-split-image">
+                <img
+                    src="../images/baja-upright-fea.png"
+                    alt="ANSYS analysis of the Baja SAE front upright"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-split-text">
+
+                <p class="section-label">
+                    FINITE ELEMENT ANALYSIS
+                </p>
+
+                <h2>
+                    Evaluating stress and deformation
+                </h2>
+
+                <p>
+                    I used ANSYS to examine stress concentrations, deformation,
+                    and load paths under representative suspension and steering
+                    loads.
+                </p>
+
+                <p>
+                    The simulation results helped identify areas that required
+                    reinforcement and regions where material could be removed.
+                    The design was iterated to balance mass, stiffness,
+                    manufacturability, and structural reliability.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MANUFACTURING -->
+
+        <section class="project-split">
+
+            <div class="project-split-image">
+                <img
+                    src="../images/baja-upright-drawing.png"
+                    alt="Engineering drawing for the Baja SAE front upright"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-split-text">
+
+                <p class="section-label">
+                    MANUFACTURING
+                </p>
+
+                <h2>
+                    Preparing the design for machining
+                </h2>
+
+                <p>
+                    I created a detailed engineering drawing containing the
+                    dimensions, tolerances, datums, and GD&amp;T needed to
+                    manufacture and inspect the component.
+                </p>
+
+                <p>
+                    Tool access, fixturing, machining operations, and inspection
+                    requirements were considered throughout the design process
+                    to ensure the upright could be manufactured accurately.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section class="project-gallery-section">
+
+            <p class="section-label">
+                PROJECT GALLERY
+            </p>
+
+            <h2>
+                Design and manufacturing process
+            </h2>
+
+            <div class="project-gallery">
+
+                <img
+                    src="../images/baja-upright-gallery-1.png"
+                    alt="Front upright CAD assembly"
+                    loading="lazy"
+                >
+
+                <img
+                    src="../images/baja-upright-gallery-2.png"
+                    alt="Front upright engineering analysis"
+                    loading="lazy"
+                >
+
+                <img
+                    src="../images/baja-upright-gallery-3.png"
+                    alt="Manufactured Baja SAE front upright"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+
+        <section class="project-back">
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 William Tun</p>
+    </footer>
+
+</body>
+
+</html>
