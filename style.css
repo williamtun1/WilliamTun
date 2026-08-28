@@ -1103,3 +1103,10 @@ footer {
         height: 310px;
     }
 }
+/* Force L-Guard titles to white */
+
+.lguard-hero h1,
+.lguard-details h2,
+.gallery-section h2 {
+    color: #ffffff !important;
+}
