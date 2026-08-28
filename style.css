@@ -1,4 +1,599 @@
 /* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo:visited,
+.logo:hover {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HOME PAGE HERO
+========================================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 140px 40px 180px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+
+    color: #888888;
+    font-size: 18px;
+}
+
+.hero h1 {
+    max-width: 950px;
+
+    font-size: clamp(48px, 7vw, 90px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #777777;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin-top: 30px;
+
+    color: #aaaaaa;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.buttons a,
+.primary-button,
+.secondary-button,
+.resume-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.primary-button {
+    background: #ffffff;
+    color: #000000;
+}
+
+.primary-button:hover {
+    background: #dddddd;
+}
+
+.secondary-button,
+.resume-button {
+    border: 1px solid #444444;
+    color: #ffffff;
+    background: transparent;
+}
+
+.secondary-button:hover,
+.resume-button:hover {
+    background: #171717;
+}
+
+
+/* =========================================
+   HERO PHOTO
+========================================= */
+
+.hero-photo {
+    width: 500px;
+    max-width: 100%;
+
+    justify-self: center;
+
+    overflow: hidden;
+
+    border: 1px solid #333333;
+    border-radius: 12px;
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   PROJECT SECTION
+========================================= */
+
+.projects-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.section-label {
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.projects-section h2 {
+    margin: 10px 0 50px;
+
+    color: #ffffff;
+    font-size: 48px;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================================
+   PROJECT CARDS
+========================================= */
+
+.project-card {
+    overflow: hidden;
+
+    border: 1px solid #222222;
+    border-radius: 16px;
+
+    background: #121212;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #555555;
+}
+
+
+/* =========================================
+   PROJECT CARD IMAGES
+========================================= */
+
+.project-image {
+    height: 330px;
+
+    overflow: hidden;
+
+    background: #1c1c1c;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   PROJECT CARD TEXT
+========================================= */
+
+.project-info {
+    padding: 28px;
+}
+
+.project-category {
+    margin-bottom: 8px;
+
+    color: #666666;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.project-info p {
+    color: #aaaaaa;
+}
+
+.project-info a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   INTERACTIVE CAD MODEL
+========================================= */
+
+.project-model {
+    position: relative;
+
+    width: 100%;
+    height: 330px;
+
+    overflow: hidden;
+
+    background-color: #181818;
+}
+
+.project-model model-viewer {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #181818;
+
+    --poster-color: #181818;
+}
+
+.model-instructions {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+
+    margin: 0;
+    padding: 7px 11px;
+
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+.model-error {
+    padding: 20px;
+
+    background: #181818;
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 140px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    margin: 10px 0 45px;
+
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.about-text > p:last-child {
+    max-width: 600px;
+
+    color: #aaaaaa;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.about-photo {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid #222222;
+    border-radius: 14px;
+}
+
+.about-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   STANDARD PROJECT PAGE HERO
+========================================= */
+
+.project-page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 70px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.project-page-title h1 {
+    margin: 15px 0 25px;
+
+    color: #ffffff;
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.project-page-summary {
+    color: #aaaaaa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   STANDARD PROJECT HERO IMAGE
+========================================= */
+
+.project-hero-image {
+    width: 100%;
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #171717;
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   STANDARD PROJECT OVERVIEW
+========================================= */
+
+.project-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.project-content h2 {
+    margin: 10px 0 25px;
+
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.15;
+}
+
+.project-text {
+    margin-bottom: 20px;
+
+    color: #aaaaaa;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   STANDARD PROJECT IMAGE + TEXT
+========================================= */
+
+.project-split {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 40px;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 50px;
+    align-items: center;
+}
+
+.project-split-image {
+    width: 100%;
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #171717;
+}
+
+.project-split-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.project-split-text h2 {
+    margin: 10px 0 20px;
+
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.project-split-text p {
+    margin-bottom: 18px;
+
+    color: #aaaaaa;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   STANDARD PROJECT PHOTO GALLERY
+========================================= */
+
+.project-gallery-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.project-gallery-section h2 {
+    margin: 10px 0 35px;
+
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 220px;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   STANDARD PROJECT BACK BUTTON
+========================================= */
+
+.project-back {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 40px 90px;
+}
+
+.project-back a {
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.project-back a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
    L-GUARD PROJECT PAGE
 ========================================= */
 
@@ -9,7 +604,9 @@
 }
 
 
-/* ---------- BACK LINK ---------- */
+/* =========================================
+   L-GUARD BACK LINK
+========================================= */
 
 .lguard-page > .project-back {
     display: inline-flex;
@@ -37,7 +634,9 @@
 }
 
 
-/* ---------- L-GUARD HERO ---------- */
+/* =========================================
+   L-GUARD HERO
+========================================= */
 
 .lguard-hero {
     display: grid;
@@ -84,6 +683,7 @@
 
     border: 1px solid #222222;
     border-radius: 14px;
+
     background-color: #171717;
 }
 
@@ -98,7 +698,9 @@
 }
 
 
-/* ---------- FULL-WIDTH IMAGE ---------- */
+/* =========================================
+   L-GUARD FULL-WIDTH IMAGE
+========================================= */
 
 .lguard-banner {
     width: 100%;
@@ -110,6 +712,7 @@
 
     border: 1px solid #222222;
     border-radius: 14px;
+
     background-color: #171717;
 }
 
@@ -123,7 +726,9 @@
 }
 
 
-/* ---------- PROJECT HIGHLIGHTS ---------- */
+/* =========================================
+   L-GUARD PROJECT HIGHLIGHTS
+========================================= */
 
 .project-highlights {
     display: grid;
@@ -167,7 +772,9 @@
 }
 
 
-/* ---------- DESIGN AND DEVELOPMENT ---------- */
+/* =========================================
+   L-GUARD TECHNICAL DETAILS
+========================================= */
 
 .lguard-details {
     display: grid;
@@ -216,6 +823,7 @@
 
     border: 1px solid #222222;
     border-radius: 14px;
+
     background-color: #171717;
 }
 
@@ -230,7 +838,9 @@
 }
 
 
-/* ---------- L-GUARD PHOTO GALLERY ---------- */
+/* =========================================
+   L-GUARD PHOTO GALLERY
+========================================= */
 
 .gallery-section {
     margin-bottom: 80px;
@@ -262,6 +872,7 @@
 
     border: 1px solid #222222;
     border-radius: 12px;
+
     background-color: #171717;
 }
 
@@ -281,7 +892,9 @@
 }
 
 
-/* ---------- BOTTOM NAVIGATION ---------- */
+/* =========================================
+   L-GUARD BOTTOM NAVIGATION
+========================================= */
 
 .project-bottom-navigation {
     display: flex;
@@ -309,7 +922,40 @@
 }
 
 
-/* ---------- L-GUARD TABLET ---------- */
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 40px 25px;
+
+    border-top: 1px solid #1f1f1f;
+
+    color: #777777;
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo {
+        width: 100%;
+        max-width: 550px;
+
+        margin-top: 40px;
+
+        justify-self: start;
+    }
+}
+
 
 @media (max-width: 850px) {
 
@@ -341,7 +987,80 @@
 }
 
 
-/* ---------- L-GUARD MOBILE ---------- */
+@media (max-width: 800px) {
+
+    nav {
+        padding: 25px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 90px 25px 120px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .projects-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .project-page-hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .project-hero-image {
+        height: 300px;
+    }
+
+    .project-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-split-image {
+        height: 280px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        height: 280px;
+    }
+
+    .project-page-hero,
+    .project-content,
+    .project-split,
+    .project-gallery-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
 
 @media (max-width: 560px) {
 
