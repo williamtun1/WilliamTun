@@ -1192,3 +1192,40 @@ main > .project-back,
         grid-row: 1;
     }
 }
+/* Show full images without cropping */
+.project-split .project-split-image {
+    height: auto !important;
+}
+
+.project-split .project-split-image img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+}
+
+/* Desktop: text left, image right */
+@media (min-width: 801px) {
+    .project-split .project-split-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .project-split .project-split-image {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* Mobile: text above image */
+@media (max-width: 800px) {
+    .project-split .project-split-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .project-split .project-split-image {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
