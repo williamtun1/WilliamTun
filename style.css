@@ -1204,8 +1204,9 @@ main > .project-back,
     object-fit: contain;
 }
 
-/* Desktop: text left, image right */
+/* Desktop: alternate image placement */
 @media (min-width: 801px) {
+    /* First, third, fifth: image right */
     .project-split .project-split-text {
         grid-column: 1;
         grid-row: 1;
@@ -1215,8 +1216,16 @@ main > .project-back,
         grid-column: 2;
         grid-row: 1;
     }
-}
 
+    /* Second, fourth, sixth: image left */
+    :nth-child(even of .project-split) .project-split-image {
+        grid-column: 1;
+    }
+
+    :nth-child(even of .project-split) .project-split-text {
+        grid-column: 2;
+    }
+}
 /* Mobile: text above image */
 @media (max-width: 800px) {
     .project-split .project-split-text {
