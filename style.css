@@ -1124,3 +1124,47 @@ footer {
 .highlight-card p {
     color: #b8b8b8 !important;
 }
+/* Wider layout across the website */
+nav,
+.hero,
+.projects-section,
+.about-section,
+.project-page-hero,
+.project-content,
+.project-split,
+.project-gallery-section,
+main > .project-back,
+.lguard-page {
+    width: 95%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keep columns within the available width */
+@media (min-width: 801px) {
+    .project-split {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+/* Comfortable margins on smaller screens */
+@media (max-width: 800px) {
+    nav,
+    .hero,
+    .projects-section,
+    .about-section,
+    .project-page-hero,
+    .project-content,
+    .project-split,
+    .project-gallery-section,
+    main > .project-back {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .lguard-page {
+        width: calc(100% - 40px);
+    }
+}
