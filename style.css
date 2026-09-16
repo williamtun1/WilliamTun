@@ -1245,3 +1245,7 @@ main > .project-back,
     display: block;
     border-radius: 8px;
 }
+.home-baja-photo-container {
+    width: 500px;
+    max-width: 100%;
+}
