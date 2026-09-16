@@ -1239,3 +1239,21 @@ main > .project-back,
     }
 }
 
+/* Enlarge homepage hero photo */
+@media (min-width: 901px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) 650px !important;
+    }
+
+    .hero-photo {
+        width: 650px !important;
+        max-width: none !important;
+        justify-self: end !important;
+    }
+
+    .hero-photo img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
