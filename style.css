@@ -1238,3 +1238,10 @@ main > .project-back,
         grid-row: 2;
     }
 }
+.baja-photo {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
