@@ -72,7 +72,7 @@ nav {
     padding: 140px 40px 180px;
 
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
     gap: 60px;
 }
@@ -158,10 +158,10 @@ nav {
 ========================================= */
 
 .hero-photo {
-    width: 500px;
+    width: min(100%, 560px);
     max-width: 100%;
 
-    justify-self: center;
+    justify-self: end;
 
     overflow: hidden;
 
@@ -1237,22 +1237,4 @@ main > .project-back,
         grid-column: 1;
         grid-row: 2;
     }
-}
-.baja-photo {
-    width: 450px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-.home-baja-photo-container {
-    width: 500px;
-    max-width: 100%;
-}
-.hero-photo img {
-    width: 450px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
 }
