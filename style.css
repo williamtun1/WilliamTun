@@ -1249,3 +1249,10 @@ main > .project-back,
     width: 500px;
     max-width: 100%;
 }
+.hero-photo img {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
